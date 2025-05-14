@@ -1,0 +1,44 @@
+.loginbox{
+    width: 300px;
+    border: 2px solid black;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.loginbox img{
+    width: 150px;
+    border: 2px solid red;
+    align-items: center;
+    object-fit: cover;
+}
+
+
+.inp{
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+
+.loginbox button{
+    width: 100%;
+    padding: 10px;
+}
+.loginbox button:hover{
+  background-color: rgb(188, 135, 144);
+  color: rgb(235, 235, 226);
+
+}
+.Aj {
+    right: 10px;
+    top: 10px;
+    position: fixed;
+    border-radius: 2px;
+}
+#a{
+    right: 100px;
+    top: 10px;
+    position: sticky;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Session Tracking Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        img {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Session Tracking Demo</h1>
+        <p>Click the image below to visit the product page:</p>
+        
+        <a href="product">
+            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" 
+                 alt="Lake and Mountain Landscape" 
+                 style="width:300px;">
+        </a>
+        
+        <p>The servlet will track your session when you click the link.</p>
+    </div>
+</body>
+</html>

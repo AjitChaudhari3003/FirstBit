@@ -1,0 +1,38 @@
+package ajit;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/credit")
+public class loginServlet extends HttpServlet {
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse res) 
+            throws ServletException, IOException {
+
+        System.out.println("Request Method: " + req.getMethod());
+        System.out.println("On server side");
+
+        String user = req.getParameter("name");
+        String pass = req.getParameter("last_four_digit");
+
+        UserAuthentication obj = new UserAuthentication();
+        boolean result = obj.checkUser(user, pass);
+
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
+
+        if (result) {
+            RequestDispatcher rd = req.getRequestDispatcher("second");
+            rd.forward(req, res);
+        } else {
+            out.println("<h3 style='color:red;'>Invalid username or last four digits</h3>");
+        }
+    }
+}

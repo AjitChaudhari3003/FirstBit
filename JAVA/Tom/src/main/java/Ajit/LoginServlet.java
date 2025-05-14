@@ -1,0 +1,45 @@
+package Ajit;
+
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
+// This is server layer
+@WebServlet("/authenticate")
+public class LoginServlet extends HttpServlet {
+    
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) 
+            throws ServletException, IOException {
+
+        System.out.println("Request Method: " + req.getMethod());
+        System.out.println("On server side");
+
+        // Retrieve user input
+        String user = req.getParameter("name");
+        String pass = req.getParameter("password"); // Use correct field name
+
+        UserAuthentication obj = new UserAuthentication();
+        boolean result = obj.checkUser(user, pass);
+
+//        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
+        
+        
+        		
+        if (result) {
+        	RequestDispatcher rd = req.getRequestDispatcher("Valid.html");
+            rd.forward(req, res);
+//            res.sendRedirect("Valid.html");
+        } else {
+            out.println("Invalid username or password");
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {
+        doGet(req, res); // Forward POST to GET logic
+    }
+}

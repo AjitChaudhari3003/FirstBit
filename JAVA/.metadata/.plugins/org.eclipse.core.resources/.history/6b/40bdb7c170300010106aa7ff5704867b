@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Credit Card Login</h2>
+    <form action="${pageContext.request.contextPath}/credit" method="post">
+        Username: <input type="text" name="name" required><br><br>
+        Last Four Digits: <input type="number" name="last_four_digit" required min="0" max="9999"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

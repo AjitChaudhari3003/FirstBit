@@ -1,0 +1,10 @@
+package ajit.com;
+
+
+
+public class UserAuthentication {
+    public boolean checkUser(String user, String pass) {
+        Connectivity ref = new DatabaseConnectivity(); 
+        return ref.isvalid(user, pass);
+    }
+}

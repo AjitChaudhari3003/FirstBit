@@ -1,0 +1,5 @@
+package ajit;
+
+public interface Connectivity {
+	public boolean isvalid(String user,String pass); 
+}

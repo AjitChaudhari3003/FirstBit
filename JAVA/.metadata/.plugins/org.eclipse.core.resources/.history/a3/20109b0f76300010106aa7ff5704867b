@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Session Tracking Application</title>
+</head>
+<body>
+    <!-- Correct Pexels image URL format -->
+    <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" 
+         alt="Lake and Mountain Landscape" 
+         style="width:200px;">
+    
+    <!-- Alternative with proper HTML structure -->
+    <div>
+        <img src="https://www.istockphoto.com/photo/scenic-aerial-view-of-the-mountain-landscape-with-a-forest-and-the-crystal-blue-gm1458782106-493292590?searchscope=image%2Cfilm" 
+             alt="Scenic view of lake and mountains"
+             width="200">
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+package Ajit;
+
+import java.io.*;
+import java.sql.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
+//This is server layer
+@WebServlet("/authenticate")
+public class LoginServlet extends HttpServlet {
+    
+	 public void doget(HttpServletRequest req, HttpServletResponse res) 
+            throws ServletException, IOException {
+        
+		 
+		 String method = req.getMethod();
+		 System.out.println(method);
+		 
+		 
+//		 if(method.equals("GET")) {
+//			 
+//		 }else {
+//			 
+//		 }
+//		 
+//        res.setContentType("text/html");
+        System.out.println("On server side ");
+        
+        
+        String user = req.getParameter("name");
+        String pass = req.getParameter("city");
+        
+        
+        UserAuthentication obj = new UserAuthentication();
+        boolean  result = obj.checkUser(user, pass);
+        PrintWriter out = res.getWriter();
+        if(result==true)
+        	out.println("Valid");
+        else
+        	out.println("Invalid");
+        
+        
+    }
+	 public void dopost(HttpServletRequest req, HttpServletResponse res)throws ServletException, IOException {
+		 doGet(req,res);
+	 }
+}

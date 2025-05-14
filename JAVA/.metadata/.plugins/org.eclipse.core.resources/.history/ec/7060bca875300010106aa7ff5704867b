@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Session Tracking Application</title>
+</head>
+<body>
+    <h1>Welcome to Session Tracking</h1>
+    <p>This is the homepage of your application.</p>
+</body>
+</html>
